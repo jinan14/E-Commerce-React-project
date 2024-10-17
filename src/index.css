@@ -1,0 +1,262 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+  color-scheme: light dark;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: inherit;
+  font-weight: inherit;
+  font-size: inherit;
+  line-height: inherit;
+}
+
+body {
+  margin: 0;
+  display: flex;
+  place-items: center;
+  min-width: 320px;
+  min-height: 100vh;
+}
+
+h1 {
+  font-size: 3.2em;
+  line-height: 1.1;
+}
+
+button:focus,
+button:focus-visible {
+  outline: 4px auto -webkit-focus-ring-color;
+}
+
+@keyframes fade-in {
+  0% {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slide-in {
+  0% {
+    opacity: 0;
+    transform: translateX(-20px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.animate-fade-in {
+  animation: fade-in 0.5s ease-out forwards;
+}
+
+.animate-slide-in {
+  animation: slide-in 0.5s ease-out forwards;
+}
+
+/* For Webkit browsers (Chrome, Safari) */
+.scrollable {
+  overflow-y: scroll;
+  /* Ensure scrollbar is enabled */
+  scrollbar-width: thin;
+  /* For Firefox */
+  scrollbar-color: transparent transparent;
+  /* For Firefox */
+}
+
+.scrollable::-webkit-scrollbar-thumb {
+  background: gray;
+  /* Make the scrollbar thumb transparent */
+}
+
+.scrollable::-webkit-scrollbar-track {
+  background: gray;
+  /* Make the scrollbar track transparent */
+}
+
+@media screen and (max-width: 1300px) {
+
+  .gallery {
+    grid-template-columns: repeat(3, 2fr);
+    width: 100%;
+  }
+
+  .cart {
+    width: 40%;
+  }
+
+  #root {
+    height: auto;
+    width: 100%;
+  }
+
+  .scrollable {
+    overflow-y: unset;
+  }
+}
+
+@media screen and (max-width: 845px) {
+
+  .gallery {
+    grid-template-columns: repeat(2, 4fr);
+    width: 100%;
+  }
+
+  .cart {
+    width: 55%;
+  }
+
+  #root {
+    height: auto;
+    width: 100%;
+  }
+
+  .scrollable {
+    overflow-y: unset;
+  }
+}
+
+@media screen and (max-width: 735px) {
+
+  .gallery {
+    grid-template-columns: repeat(2, 4fr);
+    width: 100%;
+  }
+
+  .cart {
+    width: 60%;
+  }
+
+  #root {
+    height: auto;
+    width: 100%;
+  }
+
+  .nav2 {
+    display: none;
+  }
+
+  .head {
+    width: 90%;
+  }
+
+  .cartBelow {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .scrollable {
+    overflow-y: unset;
+  }
+}
+
+@media screen and (max-width: 600px) {
+
+  .gallery {
+    grid-template-columns: repeat(1, 8fr);
+    width: 100%;
+  }
+
+  .cart {
+    width: 60%;
+  }
+
+  #root {
+    height: auto;
+    width: 100%;
+  }
+
+  .nav2 {
+    display: none;
+  }
+
+  .head {
+    width: 90%;
+  }
+
+  .cartBelow {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .scrollable {
+    overflow-y: unset;
+  }
+}
+
+@media screen and (max-width: 599px) {
+
+  .gallery {
+    grid-template-columns: repeat(1, 8fr);
+    width: 100%;
+  }
+
+  .cart {
+    width: 60%;
+  }
+
+  #root {
+    height: auto;
+    width: 100%;
+  }
+
+  .nav2 {
+    display: none;
+  }
+
+  .head {
+    width: 90%;
+  }
+
+  .cartBelow {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .col {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+
+  .card1 {
+    width: 80%;
+    margin: auto;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .head img {
+    display: none;
+  }
+
+  .scrollable {
+    overflow-y: unset;
+  }
+}
