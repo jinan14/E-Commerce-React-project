@@ -15,7 +15,7 @@ const Cart = ({ cart, updateCart, isCart, setIsCart }) => {
     }, [cart]);
 
     return (
-        <div className="cart flex flex-col gap-2 w-4/5 p-5 bg-cover text-black rounded-lg border border-gray-300 shadow-md items-center" style={{ backgroundImage: "url('../public/background.jpeg')" }}>
+        <div className="cart flex flex-col gap-2 w-4/5 p-5 bg-cover text-black rounded-lg border border-gray-300 shadow-md items-center" style={{ backgroundImage: "url('/background.jpeg')" }}>
             <h2 className='font-bold animate-fade-in'>Your Cart</h2>
             <button onClick={() => setIsCart(false)} className="w-5 h-5 flex items-center justify-center rounded-full bg-[rgb(167,6,86)] text-white hover:bg-[rgb(212,51,132)]"><RxCross2 /></button>
 
@@ -36,7 +36,7 @@ const Cart = ({ cart, updateCart, isCart, setIsCart }) => {
                                         <p>x {item.count}</p>
                                         <div className="flex gap-2">
                                             <button className="w-5 h-5 flex items-center justify-center rounded-full bg-[rgb(167,6,86)] text-white hover:bg-[rgb(212,51,132)]" onClick={() => updateCart(item.id, item.count + 1)}><FaPlus /></button>
-                                            <button className="w-5 h-5 flex items-center justify-center rounded-full bg-[rgb(167,6,86)] text-white hover:bg-[rgb(212,51,132)]" onClick={() => updateCart(item.id, item.count - 1)} disabled={item.count <= 1}><FaMinus /></button>
+                                            <button className="w-5 h-5 flex items-center justify-center rounded-full bg-[rgb(167,6,86)] text-white hover:bg-[rgb(212,51,132)]" onClick={() => updateCart(item.id, item.count - 1)} remove={item.count <= 1}><FaMinus /></button>
                                         </div>
                                     </div>
                                 </div>
