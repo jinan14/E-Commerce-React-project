@@ -1,1 +1,1 @@
-# E-Commerce Shopping Cart Website with add to cart functionality (React / JavaScript)
+# E-Commerce Shopping Cart Website with add to cart functionality (React "Vite" / JavaScript)
