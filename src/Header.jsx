@@ -2,10 +2,10 @@ import { GrCart } from "react-icons/gr";
 
 function Header(props) {
     return (
-        <header className="flex items-center justify-between p-8 border border-gray-300 shadow-md rounded-lg bg-cover text-[rgb(167,6,86)] transition-transform duration-300" style={{ backgroundImage: "url('/background.jpeg')" }}>
+        <header className="flex items-center justify-between p-3 border border-gray-300 shadow-md rounded-lg bg-cover text-[rgb(167,6,86)] transition-transform duration-300" style={{ backgroundImage: "url('/background.jpeg')" }}>
             <div className="head flex items-center gap-2 w-1/2">
-                <img src="/logo2.png" alt="Logo" className="w-[150px] h-[100px] object-cover" />
-                <h1 className=" title text-5xl font-bold ">The Book Addict</h1>
+                <img src="/logo2.png" alt="Logo" className="w-[100px] h-[90px] object-cover" />
+                <h1 className=" title text-4xl font-bold ">The Book Addict</h1>
             </div>
             <nav className="nav1 flex gap-5">
              <div className="nav2 flex gap-5">
